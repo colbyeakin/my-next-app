@@ -1,0 +1,167 @@
+export const triviaQuestions = [
+    {
+        id: 1,
+        question: "Which Disney park was the very first one ever built?",
+        options: [
+            "EPCOT",
+            "Tokyo Disneyland",
+            "Disneyland Resort in California",
+            "Magic Kingdom",
+        ],
+        answer: "Disneyland Resort in California",
+    },
+    {
+        id: 2,
+        question: "What iconic structure sits at the heart of Magic Kingdom Park?",
+        options: [
+            "Sleeping Beauty Castle",
+            "Enchanted Storybook Castle",
+            "Cinderella Castle",
+            "Beast's Castle",
+        ],
+        answer: "Cinderella Castle",
+    },
+    {
+        id: 3,
+        question: "Which Disney park is known as 'the experiemental prototype community of tomorrow'?",
+        options: [
+            "EPCOT",
+            "Disney's Animal Kingdom",
+            "Tokyo DisneySea",
+            "Disneyland Paris",
+        ],
+        answer: "EPCOT",
+    },
+    {
+        id: 4,
+        question: "Which ride at Disney's Hollywood Studios puts guests inside a thrilling intergalactic battle?",
+        options: [
+            "Peter Pan's Flight",
+            "Star Wars: Rise of the Resistance",
+            "Jungle Cruise",
+            "Big Thunder Mountain",
+        ],
+        answer: "Star Wars: Rise of the Resistance",
+    },
+    {
+        id: 5,
+        question: "Which park is home to the towering Tree of Life with over 300 animal carvings?",
+        options: [
+            "Tokyo Disneyland",
+            "Disney's Animal Kingdom",
+            "Disneyland Paris",
+            "Hong Kong Disneyland",
+        ],
+        answer: "Disney's Animal Kingdom",
+    },
+    {
+        id: 6,
+        question: "Which international park blends European charm with Disney storytelling?",
+        options: [
+            "Shanghai Disney Resort",
+            "Tokyo Disneyland",
+            "Disneyland Paris",
+            "Hong Kong Disneyland",
+        ],
+        answer: "Disneyland Paris",
+    },
+    {
+        id: 7,
+        question: "In Disney California Adventure, what land brings Marvel heros to life?",
+        options: [
+            "Tomorrowland",
+            "Avengers Campus",
+            "Marvel Hub",
+            "Hero Plaza",
+        ],
+        answer: "Avengers Campus",        
+    },
+    {
+        id: 8,
+        question: "Which attraction in EPCOT lets guests 'travel' through human communication history?",
+        options: [
+            "Mission: SPACE",
+            "Soarin' Around the World",
+            "Test Track",
+            "Spaceship Earth",
+        ],
+        answer: "Spaceship Earth",
+    },
+    {
+        id: 9,
+        question: "Which Disney park features Mystic Manor, an attraction exclusive to that location?",
+        options: [
+            "Disneyland Resort",
+            "Disneyland Paris",
+            "Hong Kong Disneyland",
+            "EPCOT",
+        ],
+        answer: "Hong Kong Disneyland",
+    },
+    {
+        id: 10,
+        question: "Which resort has the largest Disney castle ever built?",
+        options: [
+            "Magic Kingdom",
+            "Disneyland Paris",
+            "Shanghai Disney Resort",
+            "Tokyo Disneyland",
+        ],
+        answer: "Shanghai Disney Resort",
+    },
+    {
+        id: 11,
+        question: "Tokyo DisneySea is themed around what main concept?",
+        options: [
+            "Fairy-tale kingdoms",
+            "The wonders of the ocean",
+            "Futuristic technology",
+            "Wildlife exploration",
+        ],
+        answer: "The wonders of the ocean",
+    },
+    {
+        id: 12,
+        question: "Which U.S. park features Radiator Springs and Cars-themed attractions?",
+        options: [
+            "EPCOT",
+            "Disney's California Adventure",
+            "Disney's Hollywood Studios",
+            "Magic Kingdom",
+        ],
+        answer: "Disney's California Adventure",
+    },
+    {
+        id: 13,
+        question: "What makes Hong Kong Disneyland especially unique among Disney parks?",
+        options: [
+            "It has the most lands of any Disney park",
+            "Its castle transforms three princesses' castles into one",
+            "It is the only park without a fireworks show",
+            "It features a land themed entirely around pirates",
+        ],
+        answer: "Its castle transforms three princesses' castles into one",
+    },
+    {
+        id: 14,
+        question: "Which ride in Magic Kingdom takes guests on a tour through a haunted manor filled with ghostly illusions?",
+        options: [
+            "The Haunted Mansion",
+            "Pirates of the Caribbean",
+            "Expedition Everest",
+            "Phantom Manor",
+        ],
+        answer: "The Haunted Mansion",
+    },
+    {
+        id: 15,
+        question: "Which Disneyland Resort attraction was the very first modern-day 'dark ride'?",
+        options: [
+            "Space Mountain",
+            "It's a Small World",
+            "Snow White's Enchanted Wish",
+            "Alice in Wonderland",
+        ],
+        answer: "Snow White's Enchanted Wish",
+    },
+]
