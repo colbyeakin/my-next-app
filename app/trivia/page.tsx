@@ -10,16 +10,29 @@ export default function TriviaPage() {
   const [showResults, setShowResults] = useState(false);
   const [animateBadge, setAnimateBadge] = useState(false);
 
-  const handleSelect = (id: number, option: string) => {
-    setAnswers((prev) => ({ ...prev, [id]: option }));
-  };
-
-  const score = triviaQuestions.filter(
-    (q) => answers[q.id] === q.answer
-  ).length;
-
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
+// Utility to shuffle array
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const newArray = [...array];
+  for (let i = newArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+  }
+  return newArray;
+};
+
+// Select 15 random questions
+const pickRandomQuestions = () => {
+  const shuffled = shuffleArray(triviaQuestions);
+  return shuffled.slice(0, 15);
+};
+
+// Initialize state directly
+const [questions, setQuestions] = useState<typeof triviaQuestions>(() => pickRandomQuestions());
+
+
+  // Update window size for Confetti
   useEffect(() => {
     function handleResize() {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
@@ -29,6 +42,11 @@ export default function TriviaPage() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const handleSelect = (id: number, option: string) => {
+    setAnswers((prev) => ({ ...prev, [id]: option }));
+  };
+
+  const score = questions.filter((q) => answers[q.id] === q.answer).length;
 
   // DISNEY BADGE SYSTEM
   const getBadge = (score: number) => {
@@ -70,17 +88,15 @@ export default function TriviaPage() {
   const badge = getBadge(score);
 
   // Trigger badge animation on reveal
-useEffect(() => {
-  let timeout: NodeJS.Timeout;
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
 
-  if (showResults) {
-    // Delay slightly to allow the component to mount
-    timeout = setTimeout(() => setAnimateBadge(true), 50);
-  }
+    if (showResults) {
+      timeout = setTimeout(() => setAnimateBadge(true), 50);
+    }
 
-  return () => clearTimeout(timeout);
-}, [showResults]);
-
+    return () => clearTimeout(timeout);
+  }, [showResults]);
 
   return (
     <div className="max-w-3xl mx-auto p-8 text-black">
@@ -101,7 +117,7 @@ useEffect(() => {
 
       {!showResults && (
         <>
-          {triviaQuestions.map((q) => (
+          {questions.map((q) => (
             <TriviaQuestion
               key={q.id}
               question={q.question}
@@ -153,6 +169,8 @@ useEffect(() => {
             onClick={() => {
               setAnswers({});
               setShowResults(false);
+              setAnimateBadge(false);
+              setQuestions(pickRandomQuestions());
             }}
           >
             Try Again
