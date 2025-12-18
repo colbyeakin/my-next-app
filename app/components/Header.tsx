@@ -12,7 +12,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full bg-[#0a1a4a] text-yellow-200 py-6 shadow-xl border-b-4 border-yellow-400">
+    <header className="md:w-full bg-[#0a1a4a] text-yellow-200 py-6 shadow-xl border-b-4 border-yellow-400">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
 
         {/* Mickey-inspired decorative line */}
@@ -23,7 +23,7 @@ export default function Header() {
         </div>
 
         {/* Title */}
-        <h1 className="text-4xl font-extrabold tracking-wide text-yellow-300 drop-shadow-lg font-[Cinzel]">
+        <h1 className="text-4xl font-extrabold tracking-wide text-yellow-300 drop-shadow-lg font-[Cinzel] text-center">
           The Magical History of Disney Parks
         </h1>
 
